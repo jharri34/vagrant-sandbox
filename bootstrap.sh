@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-apt-get update
-apt-get install -y apache2
-if ! [ -L /var/www ]; then
-  rm -rf /var/www
-  ln -fs /vagrant /var/www
-fi
+adduser jm531
+adduser slee35
+adduser es130
+gpasswd -a jm531 wheel
+gpasswd -a slee35 wheel
+gpasswd -a es130 wheel
+
+
